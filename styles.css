@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #15191E;
+    color: #ffffff;
+}
+
+header {
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.card {
+
+    background-color: #1D232A;
+    border-radius: 8px;
+    padding: 1em;
+    margin: 1em;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.card1 {
+    background-color:#191D23;
+    border-radius: 8px;
+    padding: 1em;
+    margin: 1em;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.card h3 {
+    font-size: 1.2em;
+    color: #61dafb;
+    margin-bottom: 0.5em;
+}
+
+.card p,
+.card ul {
+    color: #ccc;
+    margin-bottom: 0.5em;
+}
+
+.card ul {
+    padding-left: 1.5em;
+}
+
+.repo-list {
+    list-style: none;
+    padding: 0;
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 1em; 
+    width: 100%;
+}
+
+.repo-card {
+    width: 30em; 
+    height: 10em;
+    background-color: #282c34;
+    border-radius: 8px;
+    padding: 1em;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.repo-card:hover {
+    background-color: #1f2228;
+}
+
+.repo-name {
+    font-weight: bold;
+    color: #61dafb;
+    cursor: pointer;
+    margin-bottom: 0.5em;
+}
+
+.repo-description {
+    color: #ccc;
+    margin-bottom: 0.5em;
+}
+
+.repo-language {
+    font-size: 0.8em;
+    color: #888;
+    margin-top: auto;
+}
+
+.repo-link {
+    color: #61dafb;
+    text-decoration: none;
+}
+
+.repo-link:hover {
+    text-decoration: underline;
+}
+
+.about-me {
+    /* max-width: 500px; */
+    width: 160%;
+    /* margin-bottom: 2em; */
+    text-align: left; 
+}
+
+
+ .scard{
+    margin: 0.25rem; 
+    font-size: 0.75rem; 
+    display: inline-flex; 
+    align-items: center; 
+    font-weight: bold; 
+    line-height: 1.25; 
+    padding-left: 0.75rem; 
+    padding-right: 0.75rem; 
+    padding-top: 0.25rem; 
+    padding-bottom: 0.25rem; 
+    background-color: #007bff; 
+    color: #fff; 
+    background-color: rgba(0, 123, 255, 0.9); 
+    border-radius: 9999px;
+  }
+  
