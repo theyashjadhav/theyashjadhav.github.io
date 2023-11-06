@@ -7,8 +7,8 @@ fetch(`https://api.github.com/users/${username}/repos`)
     .then(response => response.json())
     .then(repositories => {
         // Separate SPPU-LAB repository
-        const sppuLabRepo = repositories.find(repo => repo.name === 'Temper_C');
-        const otherRepos = repositories.filter(repo => repo.name !== 'Temper_C');
+        const sppuLabRepo = repositories.find(repo => repo.name === 'SPPU-LAB');
+        const otherRepos = repositories.filter(repo => repo.name !== 'SPPU-LAB');
 
         // Concatenate SPPU-LAB with other repositories
         const sortedRepositories = sppuLabRepo ? [sppuLabRepo, ...otherRepos] : repositories;
