@@ -11,7 +11,7 @@ fetch(`https://api.github.com/users/${username}/repos`)
         const otherRepos = repositories.filter(repo => repo.name !== 'SPPU-LAB');
 
         // Concatenate SPPU-LAB with other repositories
-        const sortedRepositories = sppuLabRepo ? [sppuLabRepo, ...otherRepos] : repositories;
+        const sortedRepositories = sppuLabRepo ;
 
         sortedRepositories.forEach(repo => {
             const listItem = document.createElement("li");
