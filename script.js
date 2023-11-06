@@ -6,6 +6,7 @@ const username = 'theyashjadhav';
 fetch(`https://api.github.com/users/${username}/repos`)
     .then(response => response.json())
     .then(repositories => {
+        repositories.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
         repositories.forEach(repo => {
             const listItem = document.createElement("li");
             listItem.className = "repo-list-item";
