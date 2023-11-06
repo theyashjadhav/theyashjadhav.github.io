@@ -6,8 +6,14 @@ const username = 'theyashjadhav';
 fetch(`https://api.github.com/users/${username}/repos`)
     .then(response => response.json())
     .then(repositories => {
-        repositories.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
-        repositories.forEach(repo => {
+        // Separate SPPU-LAB repository
+        const sppuLabRepo = repositories.find(repo => repo.name === 'SPPU-LAB');
+        const otherRepos = repositories.filter(repo => repo.name !== 'SPPU-LAB');
+
+        // Concatenate SPPU-LAB with other repositories
+        const sortedRepositories = sppuLabRepo ? [sppuLabRepo, ...otherRepos] : repositories;
+
+        sortedRepositories.forEach(repo => {
             const listItem = document.createElement("li");
             listItem.className = "repo-list-item";
 
